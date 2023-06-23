@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-html {
-  max-width: 1400PX;
-  margin: auto;
-}
 
 :root {
   --color-primary: #0065FC;
@@ -25,10 +21,10 @@ body {
 
 .al {
   text-decoration: none;
-  color: black;
+  color: #2f6cc8;
 }
 .al:hover {
-  color: #0065FC;
+  color: var(--color-primary);
 }
 
 .text-primary {
@@ -61,16 +57,68 @@ header > div {
 }
 
 header > div > nav >  a {
-  padding: 25px 20px;
-  display: inline-block;
+  padding: 29.5px 20px;
   border-top: 3px solid transparent;
   text-decoration: none;
 }
 header > div > nav >  a:hover {
 border-color: #5661ff;
-color: #5661ff;
 }
-
+.logo-box{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#connexion {
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#iconSign {
+  padding: 25px 20px;
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  color: #2f6cc8;
+  border-top: 3px solid transparent;
+  cursor: pointer;
+}
+#iconSign:hover {
+  border-color: #5661ff;
+  color: var(--color-primary);
+}
+#popUp {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
+  width: 300px;
+  height: max-content;
+  box-shadow: 0px 4px 8px 0px rgba(0, 11, 38, 0.24);
+  inset-inline-end: 0;
+  transition: 150ms;
+  margin-top: 10px;
+}
+.popUpContents{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.popUpText{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.seConnecter{
+  padding: 10px 50px 10px 50px;
+  background-color: #5661ff;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.seConnecter:hover{
+  background-color: #3541ec;
+}
 /* MAIN */
 
 main {
@@ -93,14 +141,14 @@ main {
 }
 .searchBar {
 display: flex;
-width: 380px;
+justify-content: space-between;
+width: max-content;
 border-radius: 11px;
 border: 2px solid var(--color-tertiary);
 }
 
 .searchBarIcon {
-  height: 45px;
-  width: 50px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,36 +157,56 @@ border: 2px solid var(--color-tertiary);
   margin-left: -1px;
 }
 .searchBarInput {
-  height: 40px;
   font-size: 15px;
   font-weight: bold;
   border: none;
   width: 56%;
 }
 .searchBarInputDescription {
-  height: 45px;
   width: 100%;
   font-size: 15px;
   padding-left: 10px;
   font-weight: bold;
-  border: none
+  border: none;
+  height: 100%;
+}
+.date {
+  padding: 0;
+  border: none;
+  height: 100%;
+}
+#dateDepart{
+  position: relative;
+  height: 60px;
+}
+#blocAlertDate{
+  display: none;
+}
+#alertDate{
+  position: absolute;
+  background-color: #f2f5fb;
+  padding: 20px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  box-shadow: 0px 4px 8px 0px rgba(0, 11, 38, 0.137);
 }
 .searchBarSearch {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 49px;
-  width: 120px;
+  width: 170px;
   font-size: medium;
   color: white;
   background-color: var(--color-primary);
   border-radius: 0 10px 10px 0;
   border: none;
-  margin: -2px -2px -2px;
 }
 .searchBarSearch:hover {
   font-weight: bolder;
   cursor: pointer;
+  background-color: #0054d3;
 }
 .searchIcon {
   display: none;
@@ -261,7 +329,6 @@ article {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  height: 100%;
 }
 
 .imghost {

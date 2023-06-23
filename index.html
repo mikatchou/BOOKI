@@ -18,8 +18,19 @@
     <div>
       <img class="logobooki" src="images/logo/Booki.png" alt="Logo Booki">
       <nav class="logo-box">
+        <a class="headernav al" href="index.html"">Accueil</a>
         <a class="headernav al" href="#hebergements">Hébergements</a>
         <a class="headernav al" href="#activites">Activités</a>
+        <a class="headernav al" href="#contact">Contact</a>
+        <a class="headernav al" href="#">À propos</a>
+        <div id="connexion">
+        <button id="iconSign" class="fa-solid fa-circle-user"></button>
+        <div id="popUp">
+          <div class="popUpContents"><img class="logobooki" src="images/logo/Booki.png" alt="logo du site"></div>
+          <div class="popUpContents"><a class="popUpText seConnecter" href="">Se connecter</a></div>
+          <div class="popUpContents"><a class="popUpText al" href="">Créer un compte gratuitement</a></div>
+        </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -36,6 +47,11 @@
       <form class="searchBar"  method="get">
         <div class="searchBarIcon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
         <div class="searchBarInput"> <input name="ville" class="searchBarInputDescription" type="search" placeholder="Marseille, France"></div>
+        <div><input class="date" type="date" id="check-in" name="check-in" onchange="date1()"></div>
+        <div id="dateDepart">
+          <input class="date" type="date" id="check-out" name="check-out" onchange="validateForm()">
+          <div id="blocAlertDate"><span id="alertDate">La date de départ doit être supérieure à la date d'arrivée.</span></div>
+        </div>
         <button type="submit" class="searchBarSearch">
           <span class="searchText">Rechercher</span>
           <span class="searchIcon fa-solid fa-magnifying-glass"></span>
@@ -238,15 +254,15 @@
       <h2 class="activityTitle">Activités à Marseille</h2>
       <div class="activitesBlock">
         <a class="ala al" href="#">
-         <div>
-           <div>
-             <img class="imgActivites1" src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-             alt="Un port de plaisance rempli de bateau en premier plan avec une ville dans le second plan">
-           </div>
-           <div class="activityDescription">
-             <h3 class="activityCardTitle">Vieux Port</h3>
-           </div>
-         </div>
+          <div>
+            <div>
+              <img class="imgActivites1" src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+              alt="Un port de plaisance rempli de bateau en premier plan avec une ville dans le second plan">
+            </div>
+            <div class="activityDescription">
+              <h3 class="activityCardTitle">Vieux Port</h3>
+            </div>
+          </div>
         </a>
         <div class="activitesBlock2">
           <a class="ala2 al" href="#">
@@ -346,6 +362,7 @@
 
   </footer>
   <!-- FOOTER -->
+  <script src="PopUp.js"></script>
 </body>
 
 </html>
