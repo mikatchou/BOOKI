@@ -95,7 +95,7 @@ border-color: #5661ff;
   border-radius: 20px;
   width: 300px;
   height: max-content;
-  box-shadow: 0px 4px 8px 0px rgba(0, 11, 38, 0.24);
+  box-shadow: 0px 2px 8px 0px rgba(0, 11, 38, 0.154);
   inset-inline-end: 0;
   transition: 150ms;
   margin-top: 10px;
@@ -111,13 +111,13 @@ border-color: #5661ff;
 }
 .seConnecter{
   padding: 10px 50px 10px 50px;
-  background-color: #5661ff;
+  background-color: #0048fff5;
   color: white;
   border-radius: 12px;
   text-decoration: none;
 }
 .seConnecter:hover{
-  background-color: #3541ec;
+  background-color: #001aff;
 }
 /* MAIN */
 
@@ -168,12 +168,14 @@ border: 2px solid var(--color-tertiary);
   padding-left: 10px;
   font-weight: bold;
   border: none;
+  border-right: solid 2px rgba(221, 221, 221, 0.428);
   height: 100%;
 }
 .date {
   padding: 0;
   border: none;
   height: 100%;
+  border-right: solid 2px rgba(221, 221, 221, 0.428);
 }
 #dateDepart{
   position: relative;
