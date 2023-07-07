@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="accueil.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- HEADER -->
+<header>
+    <div>
+    <a href="accueil.html"><img class="logobooki" src="../images/logo/Booki.png" alt="Logo Booki"></a>
+    <nav class="logo-box">
+        <a class="headernav al" href="accueil.html">Accueil</a>
+        <a class="headernav al" href="../recherche/index.html">Hébergements</a>
+        <a class="headernav al" href="#activites">Activités</a>
+        <a class="headernav al" href="../contact/contact.html">Contact</a>
+        <a class="headernav al" href="#">À propos</a>
+        <div id="connexion">
+            <button id="iconSign" class="fa-solid fa-circle-user"></button>
+            <div id="popUp">
+                <div class="popUpContents"><img class="logobooki" src="../images/logo/Booki.png" alt="logo du site"></div>
+                <div class="popUpContents"><a class="popUpText seConnecter" href="../connexion/connexion.html">Se connecter</a></div>
+                <div class="popUpContents"><a class="popUpText al" href="../créer un compte/connexion.html">Créer un compte gratuitement</a></div>
+            </div>
+        </div>
+    </nav>
+    </div>
+</header>
+<!-- FIN HEADER -->
+
+<!-- MAIN -->
+<main>
+
+    <!-- RERCHERCHE -->
+    <section id="recherche">
+        <div>
+            <h1 class="searchH1">Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p class="underTitle">En pein centre-ville ou en pleine nature</p>
+        </div>
+        <form class="searchBar"  method="get">
+            <div class="searchBarIcon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <div class="searchBarInput"> <input name="ville" class="searchBarInputDescription" type="search" placeholder="Marseille, France"></div>
+            <div><input class="date" type="date" id="check-in" name="check-in" onchange="date1()"></div>
+            <div id="dateDepart">
+                <input class="date" type="date" id="check-out" name="check-out" onchange="validateForm()">
+                <div id="blocAlertDate"><span id="alertDate">La date de départ doit être supérieure à la date d'arrivée.</span></div>
+            </div>
+            <div id="blocPersonne">
+                <div id="personBed">
+                    <div class="flexPersonLit">
+                        <span id="nombrePersonne">2</span>
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <div class="flexPersonLit">
+                        <span id="nombreLit">1</span>
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                </div>
+                <div id="selectPersonLit">
+                    <div id="blocParentEnfant">
+                        <div class="parentEnfant">
+                            <div>
+                                <span>Adultes</span>
+                            </div>
+                            <div>
+                                <button class="boutonPlusMoins" id="boutonMoins"><span class="plusMoins">-</span></button>
+                                <span id="nombrePersonnes">2</span>
+                                <button class="boutonPlusMoins" id="boutonPlus"><span class="plusMoins">+</span></button>
+                            </div>
+                        </div>
+                        <div class="parentEnfant">
+                            <div>
+                                <span>Enfants</span>
+                            </div>
+                            <div>
+                                <button class="boutonPlusMoins" id="boutonMoinsBb"><span class="plusMoins">-</span></button>
+                                <span id="nombreEnfants">0</span>
+                                <button class="boutonPlusMoins" id="boutonPlusBb"><span class="plusMoins">+</span></button>
+                            </div>
+                        </div>
+                        <div class="parentEnfant">
+                            <div>
+                                <span>chambre</span>
+                            </div>
+                            <div>
+                                <button class="boutonPlusMoins" id="boutonMoinsBb"><span class="plusMoins">-</span></button>
+                                <span id="nombreChambre">1</span>
+                                <button class="boutonPlusMoins" id="boutonPlusBb"><span class="plusMoins">+</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="validate">Valider</button>
+                </div>
+            </div>
+            <button type="submit" class="searchBarSearch">
+                <span class="searchText">Rechercher</span>
+                <span class="searchIcon fa-solid fa-magnifying-glass"></span>
+            </button>
+        </form>
+    </section>
+    <!-- FIN RECHERCHE --> 
+
+    <!-- DESTINATIONS POPULAIRES -->    
+    <section id="popularPlaces">
+        <div id="titleDesPo">
+            <i class="fa-solid fa-star"></i>
+            <h2>Destinations populaires</h2>
+        </div>
+        <div id="blocDesPo">
+            <a class="capsuleDesPo" href="" id="barcelone"><div class="aDesPo"><span>Barcelone</span></div></a>
+            <a class="capsuleDesPo" href="" id="paris"><div class="aDesPo"><span>Paris</span></div></a>
+            <a class="capsuleDesPo" href="" id="istanbul"><div class="aDesPo"><span>Istanbul</span></div></a>
+            <a class="capsuleDesPo" href="" id="dubai"><div class="aDesPo"><span>Dubaï</span></div></a>
+            <a class="capsuleDesPo" href="" id="venise"><div class="aDesPo"><span>venise</span></div></a>
+        </div>
+    </section>
+    <!-- FIN DESTINATIONS POPULAIRES -->
+
+    <!-- DESTINATIONS EN PROMOTION -->    
+    <section id="promoPlaces">
+        <div id="titleDesPo">
+            <i class="fa-solid fa-star"></i>
+            <h2>Destinations en promotion</h2>
+        </div>
+        <div class="blocPromo">
+            <a href="" class="promoCard">
+                <img class="imgPromo" src="../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Lit à étage Auberge La Cannebière">
+                <div class="promoDescription">
+                    <h4 class="promoCardH4 h40">Auberge La cannebière</h4>
+                    <p class="promoCardP">Nuit à partir de <strong>25&euro;</strong></p>
+                    <div class="promoStars">
+                        <div>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-tertiary star"></i>
+                        </div>
+                        <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="promoCard">
+                <img class="imgPromo" src="../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Lit double et lit simple Hôtel du port">
+                <div class="promoDescription">
+                    <h4 class="promoCardH4 h40">Hôtel du port</h4>
+                    <p class="promoCardP">Nuit à partir de <strong>52&euro;</strong></p>
+                    <div class="promoStars">
+                        <div>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-tertiary star"></i>
+                        </div>
+                        <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="promoCard">
+                <img class="imgPromo" src="../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre prenium Hôtel Les Mouettes">
+                <div class="promoDescription">
+                    <h4 class="promoCardH4 h40">Hôtel les mouettes</h4>
+                    <p class="promoCardP">Nuit à partir de <strong>76&euro;</strong></p>
+                    <div class="promoStars">
+                        <div>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-tertiary star"></i>
+                        </div>
+                        <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="promoCard">
+                <img class="imgPromo" src="../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Lit double Hôtel de la mer">
+                <div class="promoDescription">
+                    <h4 class="promoCardH4 h40">Hôtel de la mer</h4>
+                    <p class="promoCardP">Nuit à partir de <strong>46&euro;</strong></p>
+                    <div class="promoStars">
+                        <div>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-tertiary star"></i>
+                        </div>
+                        <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="promoCard">
+                <img class="imgPromo" src="../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Lit Auberge Le Panier">
+                <div class="promoDescription">
+                    <h4 class="promoCardH4 h40">Auberge Le panier</h4>
+                    <p class="promoCardP">Nuit à partir de <strong>23&euro;</strong></p>
+                    <div class="promoStars">
+                        <div>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-primary star"></i>
+                            <i class="fa-solid fa-star text-tertiary star"></i>
+                        </div>
+                        <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <p id="promoP">Afficher plus</p>
+        <div id="allPromo">
+            <div class="blocPromo">
+                <a href="" class="promoCard">
+                    <img class="imgPromo" src="../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Lit à étage Auberge La Cannebière">
+                    <div class="promoDescription">
+                        <h4 class="promoCardH4 h40">Auberge La cannebière</h4>
+                        <p class="promoCardP">Nuit à partir de <strong>25&euro;</strong></p>
+                        <div class="promoStars">
+                            <div>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-tertiary star"></i>
+                            </div>
+                            <div><img src="../images/promo/promo.png" alt=""></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="promoCard">
+                    <img class="imgPromo" src="../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Lit double et lit simple Hôtel du port">
+                    <div class="promoDescription">
+                        <h4 class="promoCardH4 h40">Hôtel du port</h4>
+                        <p class="promoCardP">Nuit à partir de <strong>52&euro;</strong></p>
+                        <div class="promoStars">
+                            <div>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-tertiary star"></i>
+                            </div>
+                            <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="promoCard">
+                    <img class="imgPromo" src="../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre prenium Hôtel Les Mouettes">
+                    <div class="promoDescription">
+                        <h4 class="promoCardH4 h40">Hôtel les mouettes</h4>
+                        <p class="promoCardP">Nuit à partir de <strong>76&euro;</strong></p>
+                        <div class="promoStars">
+                            <div>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-tertiary star"></i>
+                            </div>
+                            <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="promoCard">
+                    <img class="imgPromo" src="../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Lit double Hôtel de la mer">
+                    <div class="promoDescription">
+                        <h4 class="promoCardH4 h40">Hôtel de la mer</h4>
+                        <p class="promoCardP">Nuit à partir de <strong>46&euro;</strong></p>
+                        <div class="promoStars">
+                            <div>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-tertiary star"></i>
+                            </div>
+                            <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="promoCard">
+                    <img class="imgPromo" src="../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Lit Auberge Le Panier">
+                    <div class="promoDescription">
+                        <h4 class="promoCardH4 h40">Auberge Le panier</h4>
+                        <p class="promoCardP">Nuit à partir de <strong>23&euro;</strong></p>
+                        <div class="promoStars">
+                            <div>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-primary star"></i>
+                                <i class="fa-solid fa-star text-tertiary star"></i>
+                            </div>
+                            <div><img src="../images/promo/promo.png" alt="logo promo"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p id="promoPMoins">Afficher moins</p>
+    </section>
+    <!-- FIN DESTINATIONS POPULAIRES -->
+
+    <!-- Newsletter -->
+    <section id="newsLetter">
+        <img id="newsImg" src="../images/newsletter/newsletters.jpg" alt="">
+        <h3>S'abonner à notre newsletter</h3>
+        <div id="newsBloc">
+            <p id="newsP">Vous serez les premiers à recevoir nos meilleures offres, nos promotions exclusives et nos conseils de voyage. De plus, nous vous tiendrons informé des endroits où vous pouvez voyager.</p>
+            <form id="newsForm" action="post">
+                <input id="newsMail" type="text" placeholder="Votre adresse mail">
+                <button id="buttonAbonner">s'abonner</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+    <div>
+        <h3>A propos</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Fonctionnement du site</a>
+            </li>
+            <li>
+                <a class="al" href="#">Conditions générales des ventes</a>
+            </li>
+            <li>
+                <a class="al" href="#">données et confidentialités</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>Nos hébergements</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Charte qualité</a>
+            </li>
+            <li>
+                <a class="al" href="#">Proposer votre hôtel</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>Assistance</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Centre d'aide</a>
+            </li>
+            <li>
+                <a class="al" href="#">Nous contacter</a>
+            </li>
+        </ul>
+    </div>
+
+</footer>
+<!-- FOOTER -->
+    <script src="accueil.js"></script>
+    <script src="../barreDeRecherche/SearchBar.js"></script>
+</body>
+</html>

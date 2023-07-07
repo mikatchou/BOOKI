@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../accueil/accueil.html"><img id="logoBooki" src="../images/logo/Booki.png" alt="logo booki"></a>
+        <div id="menuUser">
+            <img id="imageUser" src="../images/personnes/admin.jpg" alt="photo utilisateur">
+            <span id="user-name">Marie More</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+    <!-- FIN HEADER -->
+
+    <div id="all">
+        <!-- MENU -->
+        <aside id="menu-navigation">
+            <div id="flexAccueilAside">
+                <div data-target="section-dashboard"  class="blocs"  id="accueilAside">
+                    <i id="icone-menu" class="fa-solid fa-bars"></i>
+                    <h1>Tableau de bord</h1>
+                </div>
+            </div>
+            <div id="menu-selection">
+                <div data-target="section-reservations" class="blocs" id="bloc-reservation">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span id="reservations">Réservations</span>
+                </div>
+                <div data-target="section-utilisateurs" class="blocs" id="bloc-utilisateurs">
+                    <i class="fa-solid fa-user"></i>
+                    <span id="utilisateurs">Utilisateurs</span>
+                </div>
+                <div data-target="section-hotels" class="blocs" id="bloc-hotels">
+                    <i class="fa-solid fa-hotel"></i>
+                    <span id="hotels">Hôtels</span>
+                </div>
+                <div data-target="section-chambres" class="blocs" id="bloc-chambres">
+                    <i class="fa-solid fa-bed"></i>
+                    <span id="chambres">Chambres</span>
+                </div>
+                <div data-target="section-factures" class="blocs" id="bloc-factures">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span id="factures">Factures</span>
+                </div>
+                <div data-target="section-messages" class="blocs" id="bloc-messages">
+                    <i class="fa-solid fa-message"></i>
+                    <span id="messages">Messages</span>
+                </div>
+                <div data-target="section-factures" class="blocs" id="bloc-factures">
+                    <i class="fa-solid fa-gear"></i>               
+                    <span id="parametres">Paramètres</span>
+                </div>
+            </div>
+        </aside>
+        <!-- FIN MENU -->
+
+        <!-- MAIN -->
+        <main>
+            <!-- DASHBOARD -->
+            <section class="les-sections" id="section-dashboard">
+                <div id="stat-chambres">
+                    <div id="enregistrement">
+                        <div class="flex-stat">
+                            <span class="nombre-stat">125</span>
+                            <i class="fa-solid fa-bookmark"></i>
+                        </div>
+                        <span>Enregistrement</span>
+                    </div>
+                    <div id="chambres-dispo">
+                        <div class="flex-stat">
+                            <span class="nombre-stat">125</span>
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <span>Chambres disponibles</span>
+                    </div>
+                    <div id="check-in">
+                        <div class="flex-stat">
+                            <span class="nombre-stat">125</span>
+                            <i class="fa-solid fa-file-import"></i>
+                        </div>
+                        <span>Check In</span>
+                    </div>
+                    <div id="check-out">
+                        <div class="flex-stat">
+                            <span class="nombre-stat">125</span>
+                            <i class="fa-solid fa-file-export"></i>
+                        </div>
+                        <span>Check Out</span>
+                    </div>
+                </div>
+                <div id="les-stats">
+                    <div id="money">                
+                    </div>
+                    <div id="stats-reservations">
+                    </div>
+                </div>
+                <div id="last-clients">
+                    <div id="last-books">
+                        <span>Dérnières réservations</span>
+                        <div id="bloc-books">
+                            <div class="bloc-book" id="book-1">
+                                <img class="book-img" src="../images/personnes/personne1.jpg" alt="">
+                                <div class="info-book">
+                                    <div class="bloc-name">
+                                        <h4 class="name-client">Julie Lavie</h4>
+                                        <span id="numero-client">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                    <span>réference : 02802</span>
+                                </div>
+                                <div class="info"><i class="fa-solid fa-info"></i></div>
+                            </div>
+                            <div class="bloc-book" id="book-1">
+                                <img class="book-img" src="../images/personnes/personne1.jpg" alt="">
+                                <div class="info-book">
+                                    <div class="bloc-name">
+                                        <h4 class="name-client">Julie Lavie</h4>
+                                        <span id="numero-client">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                    <span>réference : 02802</span>
+                                </div>
+                                <div class="info"><i class="fa-solid fa-info"></i></div>
+                            </div>
+                            <div class="bloc-book" id="book-1">
+                                <img class="book-img" src="../images/personnes/personne1.jpg" alt="">
+                                <div class="info-book">
+                                    <div class="bloc-name">
+                                        <h4 class="name-client">Julie Lavie</h4>
+                                        <span id="numero-client">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                    <span>réference : 02802</span>
+                                </div>
+                                <div class="info"><i class="fa-solid fa-info"></i></div>
+                            </div>
+                            <div class="bloc-book" id="book-1">
+                                <img class="book-img" src="../images/personnes/personne1.jpg" alt="">
+                                <div class="info-book">
+                                    <div class="bloc-name">
+                                        <h4 class="name-client">Julie Lavie</h4>
+                                        <span id="numero-client">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                    <span>réference : 02802</span>
+                                </div>
+                                <div class="info"><i class="fa-solid fa-info"></i></div>
+                            </div>
+                            <div class="bloc-book" id="book-1">
+                                <img class="book-img" src="../images/personnes/personne1.jpg" alt="">
+                                <div class="info-book">
+                                    <div class="bloc-name">
+                                        <h4 class="name-client">Julie Lavie</h4>
+                                        <span id="numero-client">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                    <span>réference : 02802</span>
+                                </div>
+                                <div class="info"><i class="fa-solid fa-info"></i></div>
+                            </div>
+                        </div>
+                        <a class="voir-tout" href=""><span>Voir tout</span></a>
+                    </div>
+                    <div id="last-messages">
+                        <div><span>Derniers messages</span></div>
+                        <div id="bloc-books">
+                            <div class="block-message" id="book-1">
+                                <div class="bloc-img"><img class="message-img" src="../images/personnes/personne1.jpg" alt=""></div>
+                                <div class="info-client">
+                                    <div class="bloc-name-message">
+                                        <h4 class="name-client-message">Julie Lavie</h4>
+                                        <span id="numero-client-message">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                </div>
+                                <div class="bloc-details-message">
+                                    <h5 class="titre-message">Demande d'annulation de commande</h5>
+                                    <p class="message">Bonsoir, sans faire exprès j’ai réservée pour 2 personnes..</p>
+                                </div>
+                                <div class="details"><span>Détails</span></div>
+                            </div>
+                            <div class="block-message" id="book-1">
+                                <div class="bloc-img"><img class="message-img" src="../images/personnes/personne1.jpg" alt=""></div>
+                                <div class="info-client">
+                                    <div class="bloc-name-message">
+                                        <h4 class="name-client-message">Julie Lavie</h4>
+                                        <span id="numero-client-message">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                </div>
+                                <div class="bloc-details-message">
+                                    <h5 class="titre-message">Demande d'annulation de commande</h5>
+                                    <p class="message">Bonsoir, sans faire exprès j’ai réservée pour 2 personnes..</p>
+                                </div>
+                                <div class="details"><span>Détails</span></div>
+                            </div>
+                            <div class="block-message" id="book-1">
+                                <div class="bloc-img"><img class="message-img" src="../images/personnes/personne1.jpg" alt=""></div>
+                                <div class="info-client">
+                                    <div class="bloc-name-message">
+                                        <h4 class="name-client-message">Julie Lavie</h4>
+                                        <span id="numero-client-message">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                </div>
+                                <div class="bloc-details-message">
+                                    <h5 class="titre-message">Demande d'annulation de commande</h5>
+                                    <p class="message">Bonsoir, sans faire exprès j’ai réservée pour 2 personnes..</p>
+                                </div>
+                                <div class="details"><span>Détails</span></div>
+                            </div>
+                            <div class="block-message" id="book-1">
+                                <div class="bloc-img"><img class="message-img" src="../images/personnes/personne1.jpg" alt=""></div>
+                                <div class="info-client">
+                                    <div class="bloc-name-message">
+                                        <h4 class="name-client-message">Julie Lavie</h4>
+                                        <span id="numero-client-message">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                </div>
+                                <div class="bloc-details-message">
+                                    <h5 class="titre-message">Demande d'annulation de commande</h5>
+                                    <p class="message">Bonsoir, sans faire exprès j’ai réservée pour 2 personnes..</p>
+                                </div>
+                                <div class="details"><span>Détails</span></div>
+                            </div>
+                            <div class="block-message" id="book-1">
+                                <div class="bloc-img"><img class="message-img" src="../images/personnes/personne1.jpg" alt=""></div>
+                                <div class="info-client">
+                                    <div class="bloc-name-message">
+                                        <h4 class="name-client-message">Julie Lavie</h4>
+                                        <span id="numero-client-message">nº3069</span>
+                                    </div>
+                                    <span>28 Juin 2023 22h30</span>
+                                </div>
+                                <div class="bloc-details-message">
+                                    <h5 class="titre-message">Demande d'annulation de commande</h5>
+                                    <p class="message">Bonsoir, sans faire exprès j’ai réservée pour 2 personnes..</p>
+                                </div>
+                                <div class="details"><span>Détails</span></div>
+                            </div>
+                        </div>
+                        <a class="voir-tout" href=""><span>Voir tout</span></a>
+                    </div>
+                </div>
+            </section>
+            <!-- FIN DASHBOARD -->
+
+            <!-- UTILISATEURS -->
+            <section class="les-sections" id="section-utilisateurs">
+                <div id="bloc-search-bar">
+                    <div id="searchBar">
+                        <input id="searchInput" type="text" placeholder="Julie Lavie, nº3069">
+                        <div><i id="search-button" class="fa-solid fa-magnifying-glass"></i></div>
+                    </div>
+                </div>
+                <div id="bloc-clients">
+                    <div>
+                        <div id="titre-clients">
+                            <div id="div-image" style="visibility: hidden;"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-titre">
+                                <div class="flex-div-titre"><span>Nom client</span></div>
+                                <div class="flex-div-titre"><span>Numéro client</span></div>
+                                <div class="flex-div-titre"><span>Téléphone</span></div>
+                                <div class="flex-div-titre"><span>Status</span></div>
+                            </div>
+                            <div id="flex-mess-info" style="visibility: hidden;">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="">voir profil</a></div>
+                            </div>
+                        </div>
+                        <div id="n3069" class="clients">
+                            <div id="div-image"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-info">
+                                <div class="div-info"><span>Olga Zahirova</span></div>
+                                <div class="div-info"><span>nº3069</span></div>
+                                <div class="div-info"><span>05 56 78 54 45</span></div>
+                                <div class="div-info"><span>rien</span></div>
+                            </div>
+                            <div id="flex-mess-info">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="../clients/clients.html">voir profil</a></div>
+                            </div>
+                        </div>
+                        <div id="n3069" class="clients">
+                            <div id="div-image"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-info">
+                                <div class="div-info"><span>Olga Zahirova</span></div>
+                                <div class="div-info"><span>nº3069</span></div>
+                                <div class="div-info"><span>05 56 78 54 45</span></div>
+                                <div class="div-info"><span>rien</span></div>
+                            </div>
+                            <div id="flex-mess-info">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="">voir profil</a></div>
+                            </div>
+                        </div>
+                        <div id="n3069" class="clients">
+                            <div id="div-image"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-info">
+                                <div class="div-info"><span>Olga Zahirova</span></div>
+                                <div class="div-info"><span>nº3069</span></div>
+                                <div class="div-info"><span>05 56 78 54 45</span></div>
+                                <div class="div-info"><span>rien</span></div>
+                            </div>
+                            <div id="flex-mess-info">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="">voir profil</a></div>
+                            </div>
+                        </div>
+                        <div id="n3069" class="clients">
+                            <div id="div-image"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-info">
+                                <div class="div-info"><span>Olga Zahirova</span></div>
+                                <div class="div-info"><span>nº3069</span></div>
+                                <div class="div-info"><span>05 56 78 54 45</span></div>
+                                <div class="div-info"><span>rien</span></div>
+                            </div>
+                            <div id="flex-mess-info">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="">voir profil</a></div>
+                            </div>
+                        </div>
+                        <div id="n3069" class="clients">
+                            <div id="div-image"><img class="client-image" src="../images/personnes/personne1.jpg" alt=""></div>
+                            <div id="flex-info">
+                                <div class="div-info"><span>Olga Zahirova</span></div>
+                                <div class="div-info"><span>nº3069</span></div>
+                                <div class="div-info"><span>05 56 78 54 45</span></div>
+                                <div class="div-info"><span>rien</span></div>
+                            </div>
+                            <div id="flex-mess-info">
+                                <div id="message-i"<i class="fa-solid fa-envelope"></i></div>
+                                <div id="info-profil"><a href="">voir profil</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="av-ap">
+                        <div style="display: flex;">
+                            <div class="div-i"><i class="fa-solid fa-chevron-left"></i></div>
+                            <div id="bloc-numero-liste">
+                                <div class="flex-numero-liste"><span class="numero-liste">1</span></div>
+                                <div class="flex-numero-liste" style="border-left: solid 1px gainsboro; border-right: solid 1px gainsboro; "><span class="numero-liste">2</span></div>
+                                <div class="flex-numero-liste"><span class="numero-liste">3</span></div>
+                            </div>
+                            <div class="div-i"><i class="fa-solid fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FIN UTILISATEURS -->
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

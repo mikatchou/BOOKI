@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="connexion.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <i id="retour" class="fa-solid fa-arrow-left"></i>
+        <div><a href="../accueil/accueil.html"><img src="Booki.png" alt="logo booki"></a></div>
+    </header>
+    <main>
+        <div id="blockConCré">
+            <div id="connexxion"><div><p id="co">se connecter</p></div></div>
+            <div id="creation"><div><p id="cre">créer un compte</p></div></div>
+        </div>
+
+
+        <form id="formulaire" action="/login" method="post">
+            <div class="block">
+                <i class="fa-solid fa-circle-user i"></i>
+                <input type="text" id="username" class="inputStyle" name="username" placeholder="identifiant" required>
+            </div>            
+            <div class="block">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" class="inputStyle" name="password" placeholder="Mot de passe" required>
+            </div>
+            <div id="blockMdp"><a href="/lostPasseword">Mot de passe oublié</a></div>        
+            <button id="connecter" type="submit">Se connecter</button>
+            <p id="condition">En continuant, vous reconnaissez avoir lu et accepté nos Conditions générales d’utilisation, et notre Déclaration sur la protection des données.</p>
+        </form>
+
+        <form id="create">
+            <div>
+                <div id="texte">
+                    <div><label for="nom">Nom :</label></div>
+                    <div><label for="prenom">Prénom :</label></div>
+                    <div><label for="codePostal">Code postal :</label></div>
+                    <div><label for="ville">Ville :</label></div>
+                    <div><label for="rue">Rue :</label></div>
+                    <div><label for="telephone">Numéro de téléphone :</label></div>
+                    <div><label for="email">E-mail :</label></div>
+                    <div><label for="motDePasse">Mot de passe :</label></div>
+                    <div><label for="confirmationMotDePasse">Confirmation du mot de passe :</label></div>
+                    <div><input type="checkbox" id="accepter" name="accepter"></div>
+                </div>
+                <div id="divInput">
+                    <div><input class="blockInput" style="width: 16rem;" type="text" id="nom" name="nom" required></div>
+                    <div><input class="blockInput" style="width: 19rem;" type="text" id="prenom" name="prenom" required></div>
+                    <div><input class="blockInput" style="width: 16rem;" type="text" id="codePostal" name="codePostal" required></div>
+                    <div><input class="blockInput" style="width: 16rem;" type="text" id="ville" name="ville" required></div>
+                    <div><input class="blockInput" style="width: 25rem;" type="text" id="rue" name="rue" required></div>
+                    <div><input class="blockInput" style="width: 25rem;" type="tel" id="telephone" name="telephone" required></div>
+                    <div><input class="blockInput" style="width: 25rem;" type="email" id="email" name="email" required></div>
+                    <div><input class="blockInput" style="width: 25rem;" type="password" id="motDePasse" name="motDePasse" required></div>
+                    <div><input class="blockInput" style="width: 25rem;" type="password" id="confirmationMotDePasse" name="confirmationMotDePasse" required></div>
+                    <div>
+                        <label for="accepter">J'ai lu et j'accepte les Conditions générales d’utilisation,<br> et la Déclaration sur la protection des données.</label>
+                    </div>
+                </div>
+            </div>
+            <button id="creerCompte" type="submit">Créer mon compte</button>
+        </form>
+
+    </main>
+
+    <script src="connexion.js"></script>
+</body>
+</html>

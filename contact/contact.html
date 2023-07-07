@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HEADER -->
+<header>
+    <div>
+    <a href="../accueil/accueil.html"><img class="logobooki" src="../images/logo/Booki.png" alt="Logo Booki"></a>
+    <nav class="logo-box">
+        <a class="headernav al" href="../accueil/accueil.html">Accueil</a>
+        <a class="headernav al" href="../recherche/index.html">Hébergements</a>
+        <a class="headernav al" href="#activites">Activités</a>
+        <a class="headernav al" href="../contact/contact.html">Contact</a>
+        <a class="headernav al" href="#">À propos</a>
+        <div id="connexion">
+        <button id="iconSign" class="fa-solid fa-circle-user"></button>
+        <div id="popUp">
+        <div class="popUpContents"><img class="logobooki" src="logo/Booki.png" alt="logo du site"></div>
+        <div class="popUpContents"><a class="popUpText seConnecter" href="../connexion/connexion.html">Se connecter</a></div>
+        <div class="popUpContents"><a class="popUpText al" href="../créer un compte/connexion.html">Créer un compte gratuitement</a></div>
+        </div>
+        </div>
+    </nav>
+    </div>
+</header>
+<!-- FIN HEADER -->
+
+<!-- MAIN -->
+<main>
+    <h1>Aide et contact</h1>
+    <form action="">
+    <select id="choix" class="blocStyle" name="choix" id="menuChoix">
+        <option class="blocStyle" value="" selected="" >Motif de contact</option>
+    </select>
+    <div id="nomPrenom">
+        <input id="nom" class="blocStyle" type="text" name="Nom" placeholder="Nom">
+        <input id="prenom" class="blocStyle" type="text" name="Prenom" placeholder="Prénom">
+    </div>
+    <input id="email" class="blocStyle" type="email" name="mail" placeholder="Adresse e-mail">
+    <input id="numero" class="blocStyle" type="text" name="Numéro" placeholder="Numéro de téléphone">
+    <textarea name="formulaire" id="formText" cols="30" rows="10"></textarea>
+    <div id="blocEnvoyer"><button id="envoyer" class="blocStyle">Envoyer</button></div>
+    </form>
+</main>
+<!-- MAIN -->
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div>
+        <h3>A propos</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Fonctionnement du site</a>
+            </li>
+            <li>
+                <a class="al" href="#">Conditions générales des ventes</a>
+            </li>
+            <li>
+                <a class="al" href="#">données et confidentialités</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>Nos hébergements</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Charte qualité</a>
+            </li>
+            <li>
+                <a class="al" href="#">Proposer votre hôtel</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>Assistance</h3>
+        <ul>
+            <li class="footli">
+                <a class="al" href="#">Centre d'aide</a>
+            </li>
+            <li>
+                <a class="al" href="#">Nous contacter</a>
+            </li>
+        </ul>
+    </div>
+
+</footer>
+<!-- FOOTER -->
+
+<script src="contact.js"></script>
+</body>
+</html>

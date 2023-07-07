@@ -210,6 +210,9 @@ border: 2px solid var(--color-tertiary);
   cursor: pointer;
   background-color: #0054d3;
 }
+.searchText {
+  font-weight: 700;
+}
 .searchIcon {
   display: none;
 
